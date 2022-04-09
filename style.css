@@ -1,20 +1,26 @@
 .calculadora-completa {
-	width: 570px;
-	height: 970px;
+	width: 370px;
+	height: 570px;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 4, minmax(50px, 1fr));
-	grid-template-rows: repeat(auto-fit, 6, minmax(50px, 1fr));
+	grid-template-columns: 1fr 1fr;       /*repeat(auto-fit, 4, minmax(50px, 1fr));*/
+	grid-template-rows: auto auto;             /*repeat(auto-fit, 6, minmax(50px, 1fr));*/
+	grid-template-areas:
+	"visor-zerar visor-zerar"
+	"numeros operadores";
 }
 
 .visor-zerar {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 50px;
+	grid-template-rows: 50px 50px;
 	grid-gap: 10px;
+	grid-area: visor-zerar;
 }
 
 .item {
-
+	font-size: 2.1em;
+	justify-content: center;
+	text-align: center;
 }
 
 .visor {
@@ -29,20 +35,26 @@
 
 .numeros {
 	display: grid;
-	grid-template-rows: repeat(4, 55px);
-	grid-template-columns: repeat(3, 55px);
-	grid-gap: 5px;
+	grid-template-rows: repeat(4, 70px);
+	grid-template-columns: repeat(3,  90px);
+	grid-gap: 10px;
 	margin-left: 5px;
-	grid-template-areas: "" "" "" "especial especial especial";
+	grid-template-areas: "auto auto auto" "auto auto auto" "auto auto auto" "especial especial especial";
+	grid-area: numeros;
 }
 
 .operador {
-	
+	min-height: 70px;
+	min-width: 50px;
+	width: auto;
+	height: auto;
 }
 
 .algarismo {
-	width: 55px;
-	height: 55px;
+	min-height: 70px;
+	min-width: 50px;
+	width: auto;
+	height: auto;
 }
 
 .especial {
@@ -51,5 +63,9 @@
 
 .operadores {
 	display: grid;
-
+	grid-gap: 10px;
+	grid-template-columns: 70px;
+	grid-template-rows: repeat(4, auto-fit, 70px);
+	grid-area: operadores;
+	margin-left: 15px;
 }
