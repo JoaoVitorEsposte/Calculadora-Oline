@@ -1,12 +1,22 @@
+.caixa-calculadora {
+	position: relative;
+	margin: 150px auto;
+	width: 700px;
+	height: 700px;
+}
+
 .calculadora-completa {
-	width: 370px;
-	height: 570px;
+	position: absolute;
+	width: 50%; /*O ideal é 30% nos dois*/
+	height: 50%;
 	display: grid;
-	grid-template-columns: 1fr 1fr;       /*repeat(auto-fit, 4, minmax(50px, 1fr));*/
-	grid-template-rows: auto auto;             /*repeat(auto-fit, 6, minmax(50px, 1fr));*/
+	grid-template-columns: 2fr 1fr;       /*repeat(auto-fit, 4, minmax(50px, 1fr));*/
+	grid-template-rows: auto auto auto-fill;             /*repeat(auto-fit, 6, minmax(50px, 1fr));*/
 	grid-template-areas:
 	"visor-zerar visor-zerar"
-	"numeros operadores";
+	"numeros operadores"
+	"resultado resultado";
+	grid-gap: 10px;
 }
 
 .visor-zerar {
@@ -14,6 +24,7 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: 50px 50px;
 	grid-gap: 10px;
+	margin-left: 5px;
 	grid-area: visor-zerar;
 }
 
@@ -24,48 +35,64 @@
 }
 
 .visor {
-	width: 100%;
-	height: 50px;
+	width: 97.7%;
+	height: 100%;
 }
 
 .zerar {
-	height: 50px;
+	height: 100%;
 	width: 100%;
 }
 
 .numeros {
 	display: grid;
-	grid-template-rows: repeat(4, 70px);
-	grid-template-columns: repeat(3,  90px);
+	grid-template-rows: repeat(3, auto-fit) auto-fill;
+	grid-template-columns: repeat(3, auto);
 	grid-gap: 10px;
 	margin-left: 5px;
-	grid-template-areas: "auto auto auto" "auto auto auto" "auto auto auto" "especial especial especial";
+	grid-template-areas: 
+	"auto auto auto"
+	"auto auto auto"
+	"auto auto auto"
+	"especial especial especial";
 	grid-area: numeros;
 }
 
 .operador {
-	min-height: 70px;
+	min-height: 60px;
 	min-width: 50px;
-	width: auto;
-	height: auto;
+	width: 100%;
+	height: 100%;
 }
 
 .algarismo {
 	min-height: 70px;
 	min-width: 50px;
-	width: auto;
-	height: auto;
+	width: 100%;
+	height: 100%;
 }
 
 .especial {
 	grid-area: especial;
+	width: 100%;
+	height: 100%;
 }
 
 .operadores {
 	display: grid;
 	grid-gap: 10px;
-	grid-template-columns: 70px;
-	grid-template-rows: repeat(4, auto-fit, 70px);
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(4, auto-fit);
 	grid-area: operadores;
 	margin-left: 15px;
+}
+
+.resultado {
+	
+}
+
+.igual {
+	grid-area: resultado;
+	width: 100%;
+	height: 100%;
 }

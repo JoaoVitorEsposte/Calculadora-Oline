@@ -7,32 +7,36 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<section class="calculadora-completa">
-		<div class="visor-zerar">
-			<textarea class="item visor"></textarea>
-			<button class="item zerar">Zerar</button>
-		</div>
-		<div class="numeros">
-			<button class="item algarismo" value="1">1</button>
-			<button class="item algarismo" value="2">2</button>
-			<button class="item algarismo" value="3">3</button>
-			<button class="item algarismo" value="4">4</button>
-			<button class="item algarismo" value="5">5</button>
-			<button class="item algarismo" value="6">6</button>
-			<button class="item algarismo" value="7">7</button>
-			<button class="item algarismo" value="8">8</button>
-			<button class="item algarismo" value="9">9</button>
-			<button class="item algarismo especial" value="0">0</button>
-		</div>
-		<div class="operadores">
-			<button class="item operador" value="-">-</button>
-			<button class="item operador" value="+">+</button>
-			<button class="item operador" value="*">*</button>
-			<button class="item operador" value="/">/</button>
-			<button class="item operador" value="=">=</button>
-		</div>
+	<section class="caixa-calculadora">
+		<section class="calculadora-completa">
+			<div class="visor-zerar">
+				<input type="text" name="tela" class="item visor">
+				<button class="item zerar">Zerar</button>
+			</div>
+			<div class="numeros">
+				<button class="item algarismo" value="1">1</button>
+				<button class="item algarismo" value="2">2</button>
+				<button class="item algarismo" value="3">3</button>
+				<button class="item algarismo" value="4">4</button>
+				<button class="item algarismo" value="5">5</button>
+				<button class="item algarismo" value="6">6</button>
+				<button class="item algarismo" value="7">7</button>
+				<button class="item algarismo" value="8">8</button>
+				<button class="item algarismo" value="9">9</button>
+				<button class="item algarismo especial" value="0">0</button>
+			</div>
+			<div class="operadores">
+				<button class="item operador" value="-">-</button>
+				<button class="item operador" value="+">+</button>
+				<button class="item operador" value="*">*</button>
+				<button class="item operador" value="/">/</button>
+			</div>
+			<div class="resultado">
+				<button class="item igual" value="=">=</button>
+			</div>
 
-		<!--UTILIZAR LISTAS PARA OS OPERADORES, E FAZER ASSIM: LISTA DE CONTA "PRIMEIRO NÚMERO, OPERADOR, SEGUNDO NÚMERO". QUANDO O USUÁRIO CLICAR EM IGUAL, REALIZAR PRIMERIO -> OPERADOR -> SEGUNDO;-->
+			<!--UTILIZAR LISTAS PARA OS OPERADORES, E FAZER ASSIM: LISTA DE CONTA "PRIMEIRO NÚMERO, OPERADOR, SEGUNDO NÚMERO". QUANDO O USUÁRIO CLICAR EM IGUAL, REALIZAR PRIMERIO -> OPERADOR -> SEGUNDO;-->
+		</section>
 	</section>
 
 	<script type="text/javascript" src="main.js"></script>
