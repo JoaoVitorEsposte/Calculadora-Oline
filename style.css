@@ -24,7 +24,6 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: 50px 50px;
 	grid-gap: 10px;
-	margin-left: 5px;
 	grid-area: visor-zerar;
 }
 
@@ -32,11 +31,32 @@
 	font-size: 2.1em;
 	justify-content: center;
 	text-align: center;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+	text-shadow: 2px 2px black;
+}
+
+.item:focus {
+	box-shadow: inset 0 0 0.5em gold;
+}
+
+.item:active {
+	box-shadow: inset 0 0 0.7em orange;
+	text-shadow: 1px 1px black;
 }
 
 .visor {
 	width: 97.7%;
 	height: 100%;
+	font-size: 2.1em;
+	justify-content: center;
+	text-align: center;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+	text-shadow: 2px 2px black;
+	cursor: initial;
 }
 
 .zerar {
@@ -49,7 +69,6 @@
 	grid-template-rows: repeat(3, auto-fit) auto-fill;
 	grid-template-columns: repeat(3, auto);
 	grid-gap: 10px;
-	margin-left: 5px;
 	grid-template-areas: 
 	"auto auto auto"
 	"auto auto auto"
@@ -84,15 +103,15 @@
 	grid-template-columns: 100%;
 	grid-template-rows: repeat(4, auto-fit);
 	grid-area: operadores;
-	margin-left: 15px;
 }
 
 .resultado {
 	
+	grid-area: resultado;
 }
 
 .igual {
-	grid-area: resultado;
+	min-height: 70px;
 	width: 100%;
 	height: 100%;
 }
