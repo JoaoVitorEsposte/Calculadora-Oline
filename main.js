@@ -22,24 +22,6 @@ let numeroVisor;
 //Esta variável irá guardar o resultado das operações;
 let resultado;
 
-/*
-Até aqui acertei a lógica da função, mas a estou chamando no momento errado.
-Devo corrigir o for, pois cada número clicado deve ser armazenado no visor antes de ir para a listaOperacao.
-Amanhã irei corrigir esse defeito no código e terminar a lógica;
-*/
-
-//Função que define que cada primeiro algarismo clicado deve ser armazenado no índice 0 da listaOperacao;
-//Rever por completo o conceito dessa função!!!;
-function guardaNumero (valorQualquer) {
-	if(aux < listaOperacao.length){
-		listaOperacao[aux] = listaAlgarismos[indiceAlgarismo].value;
-		aux++;
-	}else {
-		listaOperacao[0] = listaAlgarismos[indiceAlgarismo].value;
-		aux = 1;
-	}
-}
-
 //Esta função zera o visor, a lista de operação (primeiro número, operador e segundo número) e as variáveis da string;
 function zeraVisor () {
 	visorCalc.value = null;
@@ -48,12 +30,6 @@ function zeraVisor () {
 	}
 	auxString = ``;
 	numeroString = ``;
-}
-
-//Guarda os números clicados diretamente no visor
-function guardaAlgarismoVisor (indiceAlgarismo) {
-	visorCalc.value = listaAlgarismos[indiceAlgarismo].value;
-	console.log(`${visorCalc.value}`);
 }
 
 //Irá constantemente agrupando os algarismos clicados para formar grandes números;

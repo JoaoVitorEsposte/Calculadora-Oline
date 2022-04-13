@@ -7,11 +7,11 @@
 
 .calculadora-completa {
 	position: absolute;
-	width: 50%; /*O ideal é 30% nos dois*/
+	width: 50%;
 	height: 50%;
 	display: grid;
-	grid-template-columns: 2fr 1fr;       /*repeat(auto-fit, 4, minmax(50px, 1fr));*/
-	grid-template-rows: auto auto auto-fill;             /*repeat(auto-fit, 6, minmax(50px, 1fr));*/
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: auto auto auto-fill;
 	grid-template-areas:
 	"visor-zerar visor-zerar"
 	"numeros operadores"
